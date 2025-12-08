@@ -1,6 +1,7 @@
 import pygame
 import math
 from components.obstacle import CircleObstacle, RectObstacle
+from components.vector import Vector2D
 
 class InputHandler:
     def __init__(self, solver):
@@ -22,10 +23,10 @@ class InputHandler:
         if keys[pygame.K_x]: self.obs_type = "rect"
 
         if keys[pygame.K_g]:
-            self.solver.attractor_pos = self.solver.get_vector(mx, my)
+            self.solver.attractor_pos = Vector2D(mx, my)
             self.solver.attractor_force = 250000.0
         elif keys[pygame.K_f]:
-            self.solver.attractor_pos = self.solver.get_vector(mx, my)
+            self.solver.attractor_pos = Vector2D(mx, my)
             self.solver.attractor_force = -250000.0
         else:
             self.solver.attractor_pos = None

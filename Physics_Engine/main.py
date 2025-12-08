@@ -32,6 +32,7 @@ def main():
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 running = False
+
             
             input_handler.handle_event(event)
 
@@ -76,7 +77,6 @@ def main():
         info = [
             (f"FPS         : {fps:.1f}", (255, 255, 255)),
             (f"Particles   : {len(solver.particles)}", (255, 255, 255)),
-            (f"Sleeping    : {sleeping_count}", (200, 200, 200)),
             (f"Optimize    : {opt_text}", opt_color),
             ("-" * 28, (150, 150, 150)),
             (f"Material    : {mat_text}", (100, 200, 255)),

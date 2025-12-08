@@ -55,7 +55,7 @@ class Particle:
             self.radius = 5.5
             self.mass = -0.05
             self.friction = 0.1
-            self.decay = 0.005
+            self.decay = 0.01
             self.color = (150, 150, 150)
             
         elif p_type == "steam":

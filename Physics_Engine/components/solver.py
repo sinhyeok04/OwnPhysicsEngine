@@ -231,7 +231,7 @@ class Solver:
                 p2.pos.y -= move_y * r2
 
             if not p1_gas and not p2_gas:
-                friction = 0.05
+                friction = (p1.friction + p2.friction) * 0.5
                 tx, ty = -n_y, n_x
                 v1x = p1.pos.x - p1.prev_pos.x
                 v1y = p1.pos.y - p1.prev_pos.y
